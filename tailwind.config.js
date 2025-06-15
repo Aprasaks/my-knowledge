@@ -3,6 +3,11 @@ module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: { extend: {} },
+  theme: { extend: {
+    fontFamily: {
+      hanna: ['BMHANNAPro'  ],
+      decobox: ['cafe24Decobox' ],
+    },  
+  } },
   plugins: [],
 }

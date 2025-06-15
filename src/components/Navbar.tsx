@@ -8,11 +8,11 @@ const NAV_MENU = [
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex items-center justify-between px-8 py-5">
+    <nav className="w-full flex items-center justify-between px-8 py-5 font-decobox text-white z-10">
       {/* 왼쪽: DEMIAN */}
       <div className="flex-1">
         <Link href="/">
-          <span className="font-bold text-2xl text-zinc-900 hover:opacity-80 transition">
+          <span className="font-bold text-2xl  hover:opacity-80 transition">
             DEMIAN
           </span>
         </Link>
@@ -24,7 +24,7 @@ export default function Navbar() {
           <div key={link} className="group relative px-2 py-1">
             <Link
               href={link}
-              className="relative text-zinc-900 text-lg font-semibold"
+              className="relative text-lg font-semibold"
             >
               {name}
               <span
