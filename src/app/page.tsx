@@ -1,95 +1,54 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// src/app/page.tsx
+import Spline from '@splinetool/react-spline/next';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main className="relative min-h-screen flex flex-col items-center justify-center">
+      {/* Spline 배경 */}
+      <Spline
+        scene="https://prod.spline.design/1R-Re4QqI1zUkFxz/scene.splinecode"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          zIndex: -1,
+        }}
+      />
+      {/* 메인 내용 */}
+      <div className="flex gap-8 relative z-10">
+        {/* Frontend Developer */}
+        <div className="relative w-80 h-14 rounded-full overflow-hidden shadow-lg">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#6D28D9,#E11D48,#F59E42,#6D28D9)] 
+                          bg-[length:300%_100%] animate-gradient-move" />
+          <div className="absolute inset-1 rounded-full bg-transparent flex items-center justify-center">
+            <span className="text-white font-bold text-xl tracking-wide">
+              Frontend Developer
+            </span>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* Backend Developer */}
+        <div className="relative w-80 h-14 rounded-full overflow-hidden shadow-lg">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#16A34A,#22D3EE,#A3E635,#16A34A)] 
+                          bg-[length:300%_100%] animate-gradient-move" />
+          <div className="absolute inset-1 rounded-full bg-transparent flex items-center justify-center">
+            <span className="text-white font-bold text-xl tracking-wide">
+              Backend Developer
+            </span>
+          </div>
+        </div>
+        {/* FullStack Developer */}
+        <div className="relative w-80 h-14 rounded-full overflow-hidden shadow-lg">
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,#2563EB,#D946EF,#0EA5E9,#2563EB)] 
+                          bg-[length:300%_100%] animate-gradient-move" />
+          <div className="absolute inset-1 rounded-full bg-transparent flex items-center justify-center">
+            <span className="text-white font-bold text-xl tracking-wide">
+              FullStack Developer
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
