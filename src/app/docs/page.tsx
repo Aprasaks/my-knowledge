@@ -1,23 +1,11 @@
 // src/app/docs/page.tsx
+import Sidebar from '../../components/Sidebar';
+
 export default function DocsPage() {
     return (
         <main className="min-h-screen flex ">
         {/* 사이드바 */}
-        <aside className="w-64 p-6">
-        {/* 사이드바 검색 */}
-        <input
-            className="w-full px-3 py-2 mb-6 rounded border border-zinc-700 bg-zinc-800 text-base outline-none focus:ring-2 focus:ring-blue-400"
-            placeholder="문서 검색..."
-        />
-        {/* 카테고리/목록 */}
-        <h2 className="font-bold text-lg mb-4">Sidebar</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            {/* ... */}
-        </ul>
-        </aside>
+        <Sidebar/>
         {/* 메인 콘텐츠 */}
         <section className="flex-1 p-10">
           <h1 className="text-4xl font-bold mb-4">문서 제목</h1>
