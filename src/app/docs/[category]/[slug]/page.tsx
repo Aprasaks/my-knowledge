@@ -2,9 +2,13 @@
 
 import Sidebar from '@/components/Sidebar';
 import MDXRendererWrapper from '@/components/MDXRendererWrapper';
-import { PageProps } from 'next';
 
-export default function DocsPage({ params }: PageProps<{ category: string; slug: string }>) {
+type Params = {
+  category: string;
+  slug: string;
+};
+
+export default function DocsPage({ params }: { params: Params }) {
   return (
     <main className="min-h-screen flex">
       {/* 왼쪽: 사이드바 */}
