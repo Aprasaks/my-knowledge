@@ -23,3 +23,5 @@
   .animate-gradient-move {
     animation: gradient-move 2s linear infinite alternate;
   }
+
+  @import 'prism-themes/themes/prism-vsc-dark-plus.css';
