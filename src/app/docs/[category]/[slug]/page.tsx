@@ -15,9 +15,10 @@ export default function DocsPage({ params }: Props) {
 
   return (
     <main className="min-h-screen flex">
-      {/* 왼쪽: 사이드바 */}
+      {/* 왼쪽 사이드바 */}
       <Sidebar />
-      {/* 가운데: 문서 본문 */}
+
+      {/* 메인 콘텐츠 */}
       <section className="flex-1 p-10">
         <MDXRendererWrapper category={category} slug={slug} />
       </section>
